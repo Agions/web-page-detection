@@ -1,0 +1,28 @@
+# 依赖
+node_modules/
+package-lock.json
+yarn.lock
+
+# 构建文件
+dist/
+*.crx
+*.pem
+*.zip
+
+# 日志
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 编辑器相关
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 临时文件
+icon_preview.html 

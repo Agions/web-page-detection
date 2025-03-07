@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>技术详情</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 25px;
+    }
+    
+    .header {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .tech-icon {
+      width: 64px;
+      height: 64px;
+      margin-right: 20px;
+      object-fit: contain;
+    }
+    
+    /* 图标备用显示 */
+    .icon-fallback {
+      width: 64px;
+      height: 64px;
+      margin-right: 20px;
+      background-color: #4285f4;
+      color: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: bold;
+    }
+    
+    .tech-title {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+    }
+    
+    .tech-version {
+      font-size: 14px;
+      color: #666;
+      margin-top: 5px;
+    }
+    
+    .section {
+      margin-bottom: 25px;
+    }
+    
+    .section-title {
+      font-size: 18px;
+      color: #4285f4;
+      margin-bottom: 10px;
+      border-left: 3px solid #4285f4;
+      padding-left: 10px;
+    }
+    
+    .description {
+      line-height: 1.6;
+      color: #555;
+    }
+    
+    .feature-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .feature-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .feature-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .resource-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 15px;
+    }
+    
+    .resource-item {
+      border: 1px solid #eee;
+      border-radius: 4px;
+      padding: 15px;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+    
+    .resource-item:hover {
+      background-color: #f8f8f8;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    
+    .resource-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .resource-description {
+      font-size: 12px;
+      color: #777;
+    }
+    
+    .back-button {
+      display: inline-block;
+      padding: 8px 12px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+    
+    .back-button:hover {
+      background-color: #3367d6;
+    }
+    
+    #tech-details-content {
+      max-height: 600px;
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="tech-details-content">
+      <!-- 技术详情内容会通过JavaScript动态加载 -->
+      <div class="header">
+        <img id="detail-icon" src="" class="tech-icon" alt="">
+        <div>
+          <h1 id="detail-name" class="tech-title"></h1>
+          <div id="detail-version" class="tech-version"></div>
+        </div>
+      </div>
+      
+      <div class="section">
+        <h2 class="section-title">技术简介</h2>
+        <div id="detail-description" class="description"></div>
+      </div>
+      
+      <div class="section">
+        <h2 class="section-title">主要特点</h2>
+        <ul id="detail-features" class="feature-list"></ul>
+      </div>
+      
+      <div class="section">
+        <h2 class="section-title">学习资源</h2>
+        <div id="detail-resources" class="resource-list"></div>
+      </div>
+    </div>
+    
+    <a href="#" class="back-button" id="back-button">返回</a>
+  </div>
+  
+  <script src="tech_details.js"></script>
+</body>
+</html> 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>网页技术检测与AI助手</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="tab-navigation">
+      <button class="tab-button active" data-tab="tech-detector">技术检测</button>
+      <button class="tab-button" data-tab="ai-chat">AI聊天</button>
+      <button class="tab-button" data-tab="settings">设置</button>
+    </div>
+    
+    <div id="tech-detector" class="tab-content active">
+      <h2>网页技术栈</h2>
+      <div class="loader" id="tech-loader"></div>
+      <div id="tech-list" class="tech-container"></div>
+    </div>
+    
+    <div id="ai-chat" class="tab-content">
+      <h2>AI助手聊天</h2>
+      <div class="chat-container">
+        <div id="chat-messages" class="chat-messages"></div>
+        <div class="chat-input-container">
+          <input type="text" id="chat-input" placeholder="输入消息...">
+          <button id="send-button">发送</button>
+        </div>
+      </div>
+      <div class="chat-options">
+        <label>
+          <input type="checkbox" id="enable-web-search"> 启用网络搜索
+        </label>
+      </div>
+    </div>
+    
+    <div id="settings" class="tab-content">
+      <h2>设置</h2>
+      <div class="setting-item">
+        <label for="ollama-url">Ollama API地址:</label>
+        <input type="text" id="ollama-url" value="http://localhost:11434">
+      </div>
+      <div class="setting-item">
+        <label for="ollama-model">Ollama模型:</label>
+        <input type="text" id="ollama-model" value="llama3">
+      </div>
+      <button id="save-settings">保存设置</button>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html> 
